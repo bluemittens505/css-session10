@@ -1,6 +1,6 @@
 
 var menu = $("nav ul");
-$("#pull").on("click", function(e){
+$("#pull").on("click tap", function(e){
   e.preventDefault();
   menu.slideToggle();
 });
@@ -14,7 +14,7 @@ $(window).resize(function(){
     });
 
 
-$('.content-video a').on('click',function(e){
+$('.content-video a').on('click tap',function(e){
 
   $('.content-video a').removeClass('active');
   $(this).addClass('active');
@@ -28,7 +28,7 @@ $('.content-video a').on('click',function(e){
     });
 
 
-$('.nav-sub > li a').on('click', function(e){
+$('.nav-sub > li a').on('click tap', function(e){
  $('.nav-sub ul').slideUp();
  $(this).next().slideToggle();
      // console.log(this);
@@ -36,7 +36,7 @@ $('.nav-sub > li a').on('click', function(e){
      e.preventDefault();
    });
 
-$('.image-tn a').on('click', function(){
+$('.image-tn a').on('click tap', function(){
   var imgsrc = $(this).attr('href');
   var titleText = $(this).find('img').attr('title'); 
   $('.content-slider > img').attr('src',imgsrc); 
